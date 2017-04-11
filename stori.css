@@ -1,0 +1,140 @@
+/*     _           _    _    
+ *  __| |_ ___ _ _(_)  (_)___
+ * (_-<  _/ _ \ '_| |_ | (_-<
+ * /__/\__\___/_| |_(_)/ /__/
+ * stori CSS - v1.0  (__/  
+ * Darren Hewer 2017
+ */
+
+/****************************************************************************
+ * Root element & direct children
+ */
+
+.stori {
+    box-sizing: border-box;
+    clear: both;
+    list-style-type: none;
+    max-width: 42em;
+    overflow: hidden;
+    padding: 2em;
+    text-align: left;
+    width: 100%;
+}
+.stori * {
+    box-sizing: inherit;
+}
+.stori > * {
+    margin: 0;
+}
+.stori-js .stori > *:not('.stori-controls') {
+    display: none;
+}
+/* Sizes stori pages when JS is off */
+body:not(.stori-js) .stori > * {
+    min-height: 100vh;
+    width: 100%;
+}
+
+/****************************************************************************
+ * Controls
+ */
+
+.stori-controls {
+    display: block;
+    position: relative;
+}
+.stori-controls-top {
+    margin-bottom: 1em;
+}
+.stori-controls-bottom {
+    margin-top: 1em;
+}
+
+.stori-controls.stori-controls-default .stori-button {
+    background-color: transparent;
+    border: 2px solid #08d;
+    border-radius: 3px;
+    color: #08d;
+    cursor: pointer;
+    font-weight: 400;
+    padding: 0.5em 1em;
+    transition: all 0.2s;
+}
+.stori-controls.stori-controls-default .stori-button + .stori-button {
+    margin-left: 0.25em;
+}
+.stori-controls.stori-controls-default .stori-button:not(.stori-disabled):hover {
+    background-color: white;
+    border-color: transparent;
+    box-shadow: 0 6px 24px 3px rgba(0,0,0,0.2);
+    color: #08d;
+    display: inline-block;
+    transform: translateY(-1px);
+}
+.stori-controls.stori-controls-default .stori-button:after {
+    content: '';
+}
+
+.stori-controls.stori-controls-default .stori-button.stori-disabled {
+    border-color: #ddd;
+    color: #ddd;
+    cursor: default;
+}
+
+.stori-controls.stori-controls-default .stori-back {
+    float: left;
+}
+.stori-controls.stori-controls-default .stori-back:before {
+    content: '\25c0';
+}
+
+.stori-controls.stori-controls-default .stori-forward {
+    float: left;
+}
+.stori-controls.stori-controls-default .stori-forward:after {
+    content: '\25b6';
+}
+
+.stori-controls.stori-controls-default .stori-restart {
+    float: right;
+}
+.stori-controls.stori-controls-default .stori-restart:before {
+    content: '\21bb';
+    font-weight: normal;
+}
+
+@media (min-width: 980px) {
+    .stori-controls.stori-controls-default .stori-back:after {
+        content: ' Back';
+    }
+    .stori-controls.stori-controls-default .stori-forward:before {
+        content: 'Forward ';
+    }
+    .stori-controls.stori-controls-default .stori-restart:after {
+        content: ' Restart';
+    }
+}
+
+.stori-controls.stori-controls-default select.stori-pageList {
+    border-radius: 3px;
+    display: block;
+    margin-left: 0.25em;
+    max-width: 200px;
+    padding: 0.5em 1em;
+}
+
+/****************************************************************************
+ * Utilities
+ */
+
+.stori-clearfix:after {
+    clear: both;
+    content: "";
+    display: block;
+}
+
+.stori-hidden {
+	display: none;
+}
+
+

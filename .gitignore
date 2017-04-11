@@ -1,0 +1,11 @@
+*.html
+*.jpg
+*.png
+*.psd
+*.old
+/css
+/fonts
+/js
+stori7.js
+stori.js.old
+LICENSE_MATERIALIZE
