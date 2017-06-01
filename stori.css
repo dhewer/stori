@@ -2,7 +2,7 @@
  *  __| |_ ___ _ _(_)  (_)___
  * (_-<  _/ _ \ '_| |_ | (_-<
  * /__/\__\___/_| |_(_)/ /__/
- * stori CSS - v1.0  (__/  
+ * stori CSS v0.8.0  (__/  
  * Darren Hewer 2017
  */
 
@@ -26,7 +26,7 @@
 .stori > * {
     margin: 0;
 }
-.stori-js .stori > *:not('.stori-controls') {
+.stori-js .stori > *:not(.stori-controls) {
     display: none;
 }
 /* Sizes stori pages when JS is off */
